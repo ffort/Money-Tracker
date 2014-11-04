@@ -20,7 +20,7 @@ public class Money_Tracker {
 		
 		//Grabs user amount input and changes it into an integer
 		intial_amount = user_input.next();
-		int int_amount = Integer.parseInt(intial_amount);
+		float int_amount = Float.parseFloat(intial_amount);
 		
 		//Displays amount
 		System.out.printf("You have $" + int_amount + " dollars\n\r");

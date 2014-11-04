@@ -2,23 +2,23 @@ import java.util.Scanner;
 
 
 public class Withdraw_Money {
-	public void subtract_from_account(int int_amount){
+	public void subtract_from_account(float int_amount){
 		
 		//Sets up scanner for user input
 		Scanner user_input = new Scanner( System.in );
 				
 		//Variables
-		int withdraw_amount;
-		int final_amount;
+		float withdraw_amount;
+		float final_amount;
 				
 		//Asks for withdraw amount
 		System.out.print("Please enter the amount you wish to withdraw:");
 		
 		//Grabs user amount input and changes it into an integer
-		withdraw_amount = Integer.parseInt(user_input.next());
+		withdraw_amount = Float.parseFloat(user_input.next());
 		
 		//Displays deposit amount
-		System.out.println("Your withdraw amount is: $" + withdraw_amount +"\n\r");
+		System.out.println("Your withdraw amount is: $" + withdraw_amount + "\n\r");
 		
 		//Adds deposit amount to account
 		final_amount = int_amount - withdraw_amount;

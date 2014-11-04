@@ -2,23 +2,23 @@ import java.util.Scanner;
 
 
 public class Deposit_Money {
-	public void add_to_account(int int_amount){
+	public void add_to_account(float int_amount){
 		
 		//Sets up scanner for user input
 		Scanner user_input = new Scanner( System.in );
 		
 		//Variables
-		int deposit_amount;
-		int final_amount;
+		float deposit_amount;
+		float final_amount;
 		
 		//Asks for deposit amount
 		System.out.print("Please enter the amount you wish to deposit:");
 		
 		//Grabs user amount input and changes it into an integer
-		deposit_amount = Integer.parseInt(user_input.next());
+		deposit_amount = Float.parseFloat(user_input.next());
 		
 		//Displays deposit amount
-		System.out.println("Your deposit amount is: $" + deposit_amount +"\n\r");
+		System.out.println("Your deposit amount is: $" + deposit_amount + "\n\r");
 		
 		//Adds deposit amount to account
 		final_amount = int_amount + deposit_amount;

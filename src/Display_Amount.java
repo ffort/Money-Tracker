@@ -1,6 +1,6 @@
 
 public class Display_Amount {
-	public void display(int amount){		
+	public void display(float amount){		
 		
 		//Creates objects to input grab class
 		input_grab input_grabObject = new input_grab();
