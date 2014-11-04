@@ -7,17 +7,13 @@ public class Money_Tracker {
 		Scanner user_input = new Scanner( System.in );
 		
 		//Sets variables
-		String Deposit = "deposit";
-		String Withdraw = "withdraw";
-		String intial_choice;
 		String intial_amount;
 			
-		//Creates objects to withdraw money and deposit money
-		Withdraw_Money Withdraw_MoneyObject = new Withdraw_Money();
-		Deposit_Money Deposit_MoneyObject = new Deposit_Money();
+		//Creates objects to input grab class
+		input_grab input_grabObject = new input_grab();
 	
 		//Prints hello statement
-		System.out.println("Hello and welcome to our money tracker program!");
+		System.out.println("Hello and welcome to our money tracker program!\n\r");
 		
 		//Gets withdraw or deposit info from user
 		System.out.print("Please enter the amount of money you have: ");
@@ -27,21 +23,11 @@ public class Money_Tracker {
 		int int_amount = Integer.parseInt(intial_amount);
 		
 		//Displays amount
-		System.out.println("You have $" + int_amount + " dollars");
+		System.out.printf("You have $" + int_amount + " dollars\n\r");
 		
-		//Gets withdraw or deposit info from user
-		System.out.println("Would you like to withdraw or deposit? ");
+		//Calls to Input Grab class
+		input_grabObject.inital_grab(int_amount);
 		
-		//Grabs withdraw or deposit
-		intial_choice = user_input.next();
 		
-		//Checks to see if the use selected deposit or accepted
-		if(intial_choice.equals(Withdraw)){
-			Withdraw_MoneyObject.subtract_from_account(int_amount);
-		}else if(intial_choice.equals(Deposit)){
-			Deposit_MoneyObject.add_to_account(int_amount);
-		}else{
-			System.out.println("Sorry please enter a correct value.");
-		}
 	}
 }

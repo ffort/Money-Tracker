@@ -12,13 +12,13 @@ public class Deposit_Money {
 		int final_amount;
 		
 		//Asks for deposit amount
-		System.out.print("Please enter the amount you wish to deposit: ");
+		System.out.print("Please enter the amount you wish to deposit:");
 		
 		//Grabs user amount input and changes it into an integer
 		deposit_amount = Integer.parseInt(user_input.next());
 		
 		//Displays deposit amount
-		System.out.println("Your deposit amount is: " + deposit_amount );
+		System.out.println("Your deposit amount is: $" + deposit_amount +"\n\r");
 		
 		//Adds deposit amount to account
 		final_amount = int_amount + deposit_amount;

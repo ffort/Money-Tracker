@@ -12,13 +12,13 @@ public class Withdraw_Money {
 		int final_amount;
 				
 		//Asks for withdraw amount
-		System.out.print("Please enter the amount you wish to withdraw: ");
+		System.out.print("Please enter the amount you wish to withdraw:");
 		
 		//Grabs user amount input and changes it into an integer
 		withdraw_amount = Integer.parseInt(user_input.next());
 		
 		//Displays deposit amount
-		System.out.println("Your withdraw amount is: " + withdraw_amount );
+		System.out.println("Your withdraw amount is: $" + withdraw_amount +"\n\r");
 		
 		//Adds deposit amount to account
 		final_amount = int_amount - withdraw_amount;
