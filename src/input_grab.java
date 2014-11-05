@@ -9,9 +9,9 @@ public class input_grab {
 			
 			//Variables
 			String intial_choice;
-			String Deposit = "deposit";
-			String Withdraw = "withdraw";
-			String Exit_Program = "exit";
+			String Deposit = "d";
+			String Withdraw = "w";
+			String Exit_Program = "e";
 			
 			//Creates objects to withdraw money and deposit money
 			Withdraw_Money Withdraw_MoneyObject = new Withdraw_Money();
@@ -19,7 +19,7 @@ public class input_grab {
 			
 			//Loops until the user selects a given value
 			do{
-				System.out.println("Would you like to withdraw,deposit,or exit?");
+				System.out.println("Would you like to withdraw(w),deposit(d),or exit(e)?");
 				
 				//Gets withdraw,deposit, or exit info from user				
 				intial_choice = user_input.next();

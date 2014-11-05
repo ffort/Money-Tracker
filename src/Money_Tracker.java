@@ -23,7 +23,8 @@ public class Money_Tracker {
 		float int_amount = Float.parseFloat(intial_amount);
 		
 		//Displays amount
-		System.out.printf("You have $" + int_amount + " dollars\n\r");
+		System.out.printf("You have $%.2f", int_amount);
+		System.out.print(" dollars\n\r");
 		
 		//Calls to Input Grab class
 		input_grabObject.inital_grab(int_amount);
