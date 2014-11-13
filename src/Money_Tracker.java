@@ -28,7 +28,6 @@ public class Money_Tracker {
 		
 		//Calls to Input Grab class
 		input_grabObject.inital_grab(int_amount);
-		
-		
+				
 	}
 }

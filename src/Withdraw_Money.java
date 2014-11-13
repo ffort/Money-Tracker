@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class Withdraw_Money {
 	public void subtract_from_account(float int_amount){
 		
+		overdraft_limit overdraft_limit = new overdraft_limit();
+		
 		//Sets up scanner for user input
 		Scanner user_input = new Scanner( System.in );
 				
@@ -19,6 +21,11 @@ public class Withdraw_Money {
 		
 		//Displays deposit amount
 		System.out.println("Your withdraw amount is: $" + withdraw_amount + "\n\r");
+		
+		//Checks to see if withdraw will cause an overdraft
+		if(int_amount < withdraw_amount){
+			overdraft_limit.limit_reached(true,int_amount);
+		}
 		
 		//Adds deposit amount to account
 		final_amount = int_amount - withdraw_amount;

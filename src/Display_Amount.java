@@ -4,8 +4,9 @@ public class Display_Amount {
 		
 		//Creates objects to input grab class
 		input_grab input_grabObject = new input_grab();
-				
-		System.out.printf("Your final amount is $%.2f", amount);
+		
+		//Displays new amount
+		System.out.printf("Your new amount is $%.2f", amount);
 		System.out.print("\n\r");
 		
 		//Calls to Input Grab class
