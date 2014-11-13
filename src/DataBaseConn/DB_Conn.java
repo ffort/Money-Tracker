@@ -1,33 +1,35 @@
 package DataBaseConn;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
-import com.mysql.jdbc.Connection;
 
 public class DB_Conn {
 	
 	private static final String USERNAME = "drico7041";
 	private static final String PASSWORD = "gastate23";
-	private static final String CONN_STRING = "jdbc:mysql://127.0.0.1:3306/Account_Information";
-	
+	private static final String CONN_STRING = "jdbc:mysql://www.db4free.net:3306/bankdricnando";
+	private static Connection conn = null;
 	public static void main(String[] args) throws SQLException {
 		
-		//Class.forName("com.mysql.jdbc.Driver");
-		
-		java.sql.Connection conn = null;
-		
-		try {
-			conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
-			System.out.println("connected");		
-		} catch (SQLException e){
-			System.err.println(e);
-		} finally {
-			if (conn != null){
-				conn.close();
-			}
-		}
+        DB db = new DB();
+        Connection conn=db.dbConnect(CONN_STRING,USERNAME,PASSWORD);
+       
+        
+       /* try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            System.out.println(" Unable to load driver. ");
+        }
 
-	}
+        try {
+            conn = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+             System.out.println(" Connection Established. ");
+        } catch (SQLException e) {
+            System.out.println(" Error connecting to database:  "
+                    + e);
+        }
+	*/
+        }
 
 }
