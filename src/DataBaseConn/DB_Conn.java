@@ -16,6 +16,8 @@ public class DB_Conn {
         Connection conn=db.dbConnect(CONN_STRING,USERNAME,PASSWORD);
        
         
+        db.dbClose(conn);
+        
        /* try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
