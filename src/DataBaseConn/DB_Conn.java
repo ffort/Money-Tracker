@@ -10,13 +10,14 @@ public class DB_Conn {
 	private static final String PASSWORD = "gastate23";
 	private static final String CONN_STRING = "jdbc:mysql://www.db4free.net:3306/bankdricnando";
 	private static Connection conn = null;
+	
 	public static void main(String[] args) throws SQLException {
 		
-        DB db = new DB();
+      /*  DB db = new DB();
         Connection conn=db.dbConnect(CONN_STRING,USERNAME,PASSWORD);
        
         
-        db.dbClose(conn);
+        db.dbClose(conn);*/
         
        /* try {
             Class.forName("com.mysql.jdbc.Driver");

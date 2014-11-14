@@ -1,9 +1,19 @@
 import java.util.Scanner;
 
+import com.mysql.jdbc.Connection;
+
+import DataBaseConn.*;
 public class Money_Tracker {
 	public static void main(String args[]){
 		
 		//Sets up scanner for user input
+		
+		DB db = new DB();
+		Connection connection = (Connection) db.dbConnect(db.CONN_STRING, db.USERNAME, db.PASSWORD);
+		 
+		db.dbClose(connection);
+		
+		
 		Scanner user_input = new Scanner( System.in );
 		
 		//Sets variables

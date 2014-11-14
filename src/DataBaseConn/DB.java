@@ -9,6 +9,12 @@ public class DB {
 	/**
 	 * @param args
 	 */
+	
+	public static final String USERNAME = "drico7041";
+	public static final String PASSWORD = "gastate23";
+	public static final String CONN_STRING = "jdbc:mysql://www.db4free.net:3306/bankdricnando";
+	public static Connection conn = null;
+	
         public DB() {}
 
         public Connection dbConnect(String db_connect_string,
