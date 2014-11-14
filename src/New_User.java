@@ -38,8 +38,12 @@ public class New_User {
 		System.out.println("Please enter your password:");
 		String password = myScanner.nextLine();	
 		
+		System.out.println("Please enter the amount you would like to deposit intially:");
+		String initial_money = myScanner.nextLine(); // This needs to be changed into an integer type class and needs to only allow two decimal places
 		
-		String sqlString = "INSERT INTO `Account_Information`(`First_Name`, `Last_Name`, `Username`, `Password`, `Balance`) VALUES ( " + F_name + ", " + L_name + ", " + username + ", " + password + ", " + 0 + " )";
+		
+		
+		String sqlString = "INSERT INTO `Account_Information`(`First_Name`, `Last_Name`, `Username`, `Password`, `Balance`) VALUES (" + "'" + F_name + "', '" + L_name + "', '" + username + "', '" + password + "', '" + initial_money + "' )";
 		
 		
 	
