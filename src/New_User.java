@@ -10,15 +10,6 @@ import DataBaseConn.*;
 public class New_User {
 
 	public New_User() {
-		// TODO Auto-generated constructor stub
-	}
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
 		Statement sqlStatement = null;
 		
 		DB db = new DB();
@@ -60,4 +51,14 @@ public class New_User {
 	}
 	
 
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+	
+	}
 }

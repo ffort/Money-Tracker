@@ -15,26 +15,44 @@ public class DB {
 	public static final String CONN_STRING = "jdbc:mysql://www.db4free.net:3306/bankdricnando";
 	public static Connection conn = null;
 	
-        public DB() {}
+        public DB() {
+        	
+            try
+            {
+                    Class.forName("com.mysql.jdbc.Driver").newInstance();
+                    Connection conn = DriverManager.getConnection(
+                    		CONN_STRING, USERNAME, PASSWORD);
+  
+                    System.out.println("Database has been connected to " + CONN_STRING);
+                    
+            }
+            catch (Exception e)
+            {
+                    e.printStackTrace();
+            }
+        	
+        }
 
         public Connection dbConnect(String db_connect_string,
           String db_userid, String db_password)
         {
-                try
-                {
-                        Class.forName("com.mysql.jdbc.Driver").newInstance();
-                        Connection conn = DriverManager.getConnection(
-                          db_connect_string, db_userid, db_password);
-      
-                        System.out.println("Database has been connected to " + db_connect_string);
-                        return conn;
-                        
-                }
-                catch (Exception e)
-                {
-                        e.printStackTrace();
-                        return null;
-                }
+
+            try
+            {
+                    Class.forName("com.mysql.jdbc.Driver").newInstance();
+                    Connection conn = DriverManager.getConnection(
+                      db_connect_string, db_userid, db_password);
+  
+                    System.out.println("Database has been connected to " + db_connect_string);
+                    return conn;
+                    
+            }
+            catch (Exception e)
+            {
+                    e.printStackTrace();
+                    return null;
+            }
+        	
         }
         
         public Connection dbClose(Connection dbconnection){

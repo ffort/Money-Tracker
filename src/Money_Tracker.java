@@ -8,10 +8,13 @@ public class Money_Tracker {
 		
 		//Sets up scanner for user input
 		
-		DB db = new DB();
-		Connection connection = (Connection) db.dbConnect(db.CONN_STRING, db.USERNAME, db.PASSWORD);
+		//DB db = new DB();
+		//Connection connection = (Connection) db.dbConnect(db.CONN_STRING, db.USERNAME, db.PASSWORD);
 		 
-		db.dbClose(connection);
+		New_User user = new New_User();
+		
+		
+		//db.dbClose(connection);
 		
 		
 		Scanner user_input = new Scanner( System.in );
