@@ -1,18 +1,19 @@
+import java.sql.SQLException;
 import java.util.Scanner;
 
 import com.mysql.jdbc.Connection;
 
 import DataBaseConn.*;
 public class Money_Tracker {
-	public static void main(String args[]){
+	public static void main(String args[]) throws SQLException{
 		
 		//Sets up scanner for user input
 		
 		//DB db = new DB();
 		//Connection connection = (Connection) db.dbConnect(db.CONN_STRING, db.USERNAME, db.PASSWORD);
 		 
-		New_User user = new New_User();
-		
+		//New_User user = new New_User();
+		Login user = new Login();
 		
 		//db.dbClose(connection);
 		
